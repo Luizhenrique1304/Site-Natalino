@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Natalino</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="snow"></div>
+    
+    <header class="hero">
+        <h1>Faltam <span id="days">00</span> dias para o Natal 🎄</h1>
+        <div class="countdown">
+            <div>
+                <span id="hours">00</span>
+                <small>Horas</small>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <small>Minutos</small>
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Receitas de Natal</h2>
+
+        <div class="cards">
+            <div class="card recipe-card" data-recipe="rabanada">Rabanada</div>
+            <div class="card recipe-card" data-recipe="chocotoneBites">Chocotone Bites</div>
+            <div class="card recipe-card" data-recipe="salpicao">Salpicão com Maionese de Alho</div>
+            <div class="card recipe-card" data-recipe="chester">Chester</div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h3 id="modalTitle"></h3>
+            <p id="modalContent"></p>
+
+            <a id="spotifyLink" class="spotify-button" target="_blank">Ouvir no Spotify</a>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>Filmes de Natal</h2>
+
+        <div class="cards"></div>
+            <div class="card movie-card" data-movie="home-alone">Esqueceram de Mim</div>
+            <div class="card movie-card" data-movie="the-grinch">O Grinch</div>
+            <div class="card movie-card" data-movie="klaus">Klaus</div>
+            <div class="card movie-card" data-movie="polar-express">O Expresso Polar</div>
+            <div class="card movie-card" data-movie="the-nightmare-before-christmas">O Estranho Mundo de Jack</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Músicas de Natal</h2>
+
+        <div class="card">
+            <div class="card music-card"
+                data-title="All I Want for Christmas Is You"
+                data-artist="Mariah Carey"
+                data-link="https://open.spotify.com/intl-pt/track/0bYg9bo50gSsH3LtXe2SQn?si=556ac3f522484d71">
+                All I Want for Christmas Is You - Mariah Carey
+            </div>
+            <div class="card music-card"
+                data-title="Last Christmas"
+                data-artist="Wham!"
+                data-link="https://open.spotify.com/intl-pt/track/2FRnf9qhLbvw8fu4IBXx78?si=082b2426eeb845e2"> 
+                Last Christmas - Wham!
+            </div>
+            <div class="card music-card" 
+                data-title="Santa Tell Me" 
+                data-artist="Ariana Grande" 
+                data-link="https://open.spotify.com/intl-pt/track/0lizgQ7Qw35od7CYaoMBZb?si=12c922d3b82a4f82">
+                Santa Tell Me - Ariana Grande
+            </div>
+            <div class="card music-card"
+                data-title="Wonderful Christmastime"
+                data-artist="Paul McCartney"
+                data-link="https://open.spotify.com/intl-pt/track/1SV1fxF65n9NhRHp3KlBuu?si=8959b35520354562">
+                Wonderful Christmastime - Paul McCartney
+            </div>
+            <div class="card music-card"
+                data-title="A Nonsense Christmas"
+                data-artist="Sabrina Carpenter"
+                data-link="https://open.spotify.com/intl-pt/track/73ye7F9Ub51dQ3CrnCHFhr?si=9fd53947cfd4449e">
+                A Nonsense Christmas - Sabrina Carpenter
+            </div>
+            <div class="card music-card"
+                data-title="Mistletoe"
+                data-artist="Justin Bieber"
+                data-link="https://open.spotify.com/intl-pt/track/7xapw9Oy21WpfEcib2ErSA?si=2202f7102da749d8">
+                Mistletoe - Justin Bieber
+            </div>
+            <div class="card music-card"
+                data-title="Happy Xmas(War is Over)"
+                data-artist="John Lennon, Yoko Ono"
+                data-link="https://open.spotify.com/intl-pt/track/27RYrbL6S02LNVhDWVl38b?si=cb7cd591c54644c5">
+                Happy Xmas(War is Over) - John Lennon, Yoko Ono
+            </div>
+            <div class="card music-card"
+                data-title="Jingle Bell Rock"
+                data-artist="Bobby Helms"
+                data-link="https://open.spotify.com/intl-pt/track/7vQbuQcyTflfCIOu3Uzzya?si=95ca6de0fab24fb6">
+                Jingle Bell Rock - Bobby Helms
+            </div>
+            <div class="card music-card"
+                data-title="Merry Christmas"
+                data-artist="Ed Sheeran, Elton John"
+                data-link="https://open.spotify.com/intl-pt/track/0hz5PNF2wejwUKCMpesQWt?si=3e26293b3fe24a6e">
+                Merry Christmas - Ed Sheeran, Elton John
+            </div>
+            <div class="card music-card"
+                data-title="Santa, Can't You Hear Me"
+                data-artist="Kelly Clarkson, Ariana Grande"
+                data-link="https://open.spotify.com/intl-pt/track/2O3MQ6H3gjrIWDcpeTrikT?si=6b1475394b6c41d7">
+                Santa, Can't You Hear Me - Kelly Clarkson, Ariana Grande
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/musicas.js"></script>
+    <script src="js/filmes.js"></script>
+</body>
+</html>

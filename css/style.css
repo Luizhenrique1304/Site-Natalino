@@ -1,0 +1,225 @@
+:root {
+    --green-dark: #081f17;
+    --green-main: #0f3d2e;
+
+    --red-main: #8b1e1e;
+    --red-light: #c0392b;
+
+    --gold-main: #d4af37;
+    --gold-light: #f1d77a;
+
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #0f3d2e, #081f17);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: radial-gradient(circle at top, #1e6f5c, #081f17);
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 2rem;
+    color: var(--gold-light);
+}
+
+.countdown {
+    display: flex;
+    gap: 1.5rem;;
+}
+
+.countdown div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    min-width: 90px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.countdown span {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    color: var(--gold-main);
+}
+
+.countdown small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.section {
+    padding: 4rem 8%;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--red-light);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    cursor: default;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--gold-main);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #081f17;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: var(--gold-light);
+}
+
+.section {
+    padding: 3rem 6%;
+}
+
+/* NEVE ANIMADA */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 40% 70%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 60% 40%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 80% 80%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 10% 60%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 30% 20%, #fff 50%, transparent 51%);
+
+  background-size: 300px 300px;
+  animation: snowFall 10s linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes snowFall {
+  0% {
+    background-position: 0 -300px;
+  }
+  100% {
+    background-position: 0 100vh;
+  }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: linear-gradient(180deg, var(--green-main), var(--green-dark));
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 520px;
+    width: 100%;
+    color: var(--white);
+    position: relative;
+    border: 1px solid var(--gold-main);
+    animation: modalFade 0.3s ease;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal h3 {
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+}
+
+.modal p {
+    line-height: 1.6;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--red-light);
+    cursor: pointer;
+}
+
+@keyframes modalFade {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.spotify-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.4rem;
+    background: #1db954;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 999px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.spotify-button:hover {
+    background: #1ed760;
+    transform: scale(1.05);
+}
